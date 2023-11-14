@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+
+.FAQ {
+  background-color: #dcdcdc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 110vh;
+}
+
+.container__FAQ_left {
+
+  width: 50%;
+  float: left;
+  zoom: 120%;
+}
+
+.container__FAQ_right {
+  text-align: center;
+  width: 50%;
+  float: left;
+  height: 100vh;
+}
+
+.imagem__FAQ {
+  scale: 60%;
+  margin-left: -25%;
+}
+
+.titulo_FAQ {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-family: 'Fjalla One', sans-serif;
+  color: #e85e09;
+}
+
+.txtAjuda {
+  width: 38%;
+  padding: 12px 20px;
+  margin: -15px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  border-style: outset;
+}
+
+.titulo-tabela {
+  background-color: #e85e09;
+  color: white;
+  text-align: center;
+}
+
+table, th, td {
+  padding: 10px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: left;
+border: 1px solid #e85e09;
+border-collapse: collapse;
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+
+.Playlists {
+  background-color: #dcdcdc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height:110vh;
+}
+.cartao{
+  background-color: white;
+  margin-top: 10px;
+  float: left;
+  display:flex;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.cartao_podcast{
+  background-color: white;
+  margin-top: 10px;
+  float: left;
+  display:flex;
+  padding: 10px;
+  padding-bottom: 20px;
+  
+}
+
+
+
+.cartao:hover {
+  background-color: #e85e09;
+}
+
+.divisoria{
+  padding: 20px 40px;
+
+}
+
+.divisoria h2{
+  color: #000000;
+  font-size: 22px;
+  padding: 10px;
+  margin-right: 130px;
+  margin-bottom: 10px;
+}
+
+.divisoria .lista{
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.container__playlists_left {
+
+  width: 50%;
+  float: left;
+  zoom: 30%;
+}
+
+.playlists_imagem{
+  height: 1000px;
+  width: 1000px;
+  zoom:100%;
+
+  }
+
+.playlists_imagem:hover{
+zoom:105%;
+}
+
+.playlists_nome{
+  color: #000000;
+  font-size: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlists_nome_podcast{
+  color: #000000;
+  font-size: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+.playlists_audio_podcast{
+  margin-top: 15px;
+  display:flex;
+  float: left;
+}
+
+.cabecalho__menu__playlists {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 15px;
+  background-color: #e85e09;
+  padding: 10px 32px;
+  border-radius: 90px;
+
+}
+.cabecalho__menu__playlists:hover {
+  text-decoration: underline;
+  color: #e85e09;
+  background-color:#ffffff;
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+
+
+
+.cadastro {
+  margin-top: 50px;
+  background-color: #dcdcdc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.container_cadastro {
+  margin-top:-20px;
+}
+
+.centralizado{
+  text-align: center;
+}
+
+.imagem__cadastro {
+  scale: 70%;
+}
+
+
+
+
+.rodape {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.btm__facebook {
+  background-color: #1a1385;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 90px;
+  width: 30%;
+}
+
+.btm__google {
+  background-color: #e5e5e5;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 90px;
+  width: 30%;
+  border: 1px solid #000000;
+}
+
+.texto-negrito {
+  font-weight: bold;
+  margin-left: -27%;
+  margin-top: 30px;
+}
+
+.texto-negrito-senha {
+  font-weight: bold;
+  margin-left: -29%;
+  margin-top: 30px;
+}
+
+.txtEmail {
+  width: 38%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  margin-left: -10px;
+  box-sizing: border-box;
+}
+
+.inscrever-se {
+  background-color: #e85e09;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  border-radius: 90px;
+  width: 20%;
+  margin-top: 40px;
+}
+
+.cad1 {
+  color: #e85e09;
+  font-size: 64px;
+  margin-bottom: -40px;
+  margin-top: 20px;
+  font-family: 'Fjalla One', sans-serif;
+
+}
+
+.login_cadastro{
+  color:#1a1385;
+}

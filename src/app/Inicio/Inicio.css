@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+.inicio {
+  background-color: #be4116;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height:110vh ;
+}
+
+
+.inicio__link {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.inicio__link:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.apresentacao__podcast {
+  display: flex;
+  align-items: flex-start;
+}
+
+.imagem__pessoas {
+  margin: 2em 2em 0 4.3em;
+}
+
+.podcast__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.podcast__nome {
+  font-family: 'Fjalla One', sans-serif;
+  color: #242424;
+  font-size: 150px;
+  margin-bottom: 0;
+  line-height: 1.0;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.podcast__subtitulo__texto {
+  font-family: 'Inter', sans-serif;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.boca__1 {
+  width: 60px;
+  height: auto;
+  margin-top: 50px;
+}

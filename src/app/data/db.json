@@ -1,0 +1,85 @@
+{
+    "playlists": [
+        {
+            "id": "1",
+            "nome": "Nerd",
+            "capa": "/jovemnerd.jpg",
+            "descricao": "Explore o mundo dos games, da culinária e do cinema com nosso podcast envolvente, que oferece análises profundas e dicas imperdíveis para os entusiastas de todas as paixões.",
+            "podcast": [
+                {
+                    "podid": "10",
+                    "podnome": "Jovem Nerd - URL",
+                    "podArquivo": "https://nerdcast-cdn.jovemnerd.com.br/mamicas_127.mp3"
+                },
+                {
+                    "podid": "11",
+                    "podnome": "Lado Bunker - local",
+                    "podArquivo": "/music/ladobunker_116.mp3"
+                },
+                {
+                    "podid": "12",
+                    "podnome": "99 vidas",
+                    "podArquivo": "/music/99vidas-584-feriados.mp3"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "nome": "Culinaria",
+            "capa": "/culinaria.png",
+            "descricao": "Delicie-se com nosso podcast de culinária, onde chefs renomados e amantes da cozinha compartilham segredos, receitas e histórias saborosas.",
+            "podcast": [
+                {
+                    "podid": "20",
+                    "podnome": "Food cast - #113",
+                    "podArquivo": "https://open.spotify.com/episode/6hUBXagfdLPUJaK1EayFv7?si=9b605dda418c40a1"
+                },
+                {
+                    "podid": "21",
+                    "podnome": "Food cast - #112",
+                    "podArquivo": "https://open.spotify.com/episode/03JSt0sGvsHYPQvoKBSzSc?si=a680002e77af43ee"
+                },
+                {
+                    "podid": "22",
+                    "podnome": "Food Cast - #111",
+                    "podArquivo": "https://open.spotify.com/episode/1MCzxLpvMAibXDH6Lg0iZL?si=08788a33626744de"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "nome": "Filmes",
+            "capa": "/cinema.jpg",
+            "descricao": "Explore o fascinante universo do cinema com nosso podcast, onde críticos e cinéfilos discutem filmes, diretores e curiosidades do mundo cinematográfico.",
+            "podcast": [
+                {
+                    "podid": "30",
+                    "podnome": "Filmes Clássicos - #203",
+                    "podArquivo": "/music/episodio203.mp3"
+                },
+                {
+                    "podid": "31",
+                    "podnome": "Filmes Clássicos - #204",
+                    "podArquivo": "/music/episodio204.mp3"
+                },
+                {
+                    "podid": "32",
+                    "podnome": "Filmes Clássicos - #205",
+                    "podArquivo": "/music/episodio205.mp3"
+                }
+            ]
+        }
+    ],
+    "users":[
+        {
+            "nome": "Rafael",
+            "email": "r@r.com",
+            "senha":"rafa1029"
+        },
+        {
+            "nome": "Ana",
+            "email": "a@a.com",
+            "senha":"112233"
+        }
+    ]
+}
