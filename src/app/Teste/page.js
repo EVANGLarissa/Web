@@ -1,88 +1,75 @@
-import React, { useState } from 'react';
-import './cadastro.css';
+"use client"
+import React from 'react';
+import './login.css';
 import ImageCadastro from './../img/foto.png';
 import Image from 'next/image';
-import { validEmail, validPassword } from './../utils/regex';
+import { useState } from 'react';
+import {validEmail, validPassword} from './../utils/regex';
 import Link from "next/link";
-import fs from 'fs';
+import axios from "axios";
 
 
-function CadastroPage() {
-    const [usuario, setUsuario] = useState({
-        nome: '',
-        email: '',
-        senha: '',
-    });
+export default function CadastroPage() {
+    const [nome, setNome] = useState();
+    const [email, setEmail] = useState();
+    const [senha, setSenha] = useState();
 
     const [nomeErr, setNomeErr] = useState(false);
     const [emailErr, setEmailErr] = useState(false);
     const [senhaErr, setSenhaErr] = useState(false);
 
     const validate = () => {
-        if (!validNome.test(usuario.nome)) {
-            setNomeErr(true);
-        } else {
-            setNomeErr(false);
+        
+        if(nome != ""){
+            setNomeErr(false)
+        }else{
+            setEmailErr(true)
         }
 
-        if (!validEmail.test(usuario.email)) {
-            setEmailErr(true);
-        } else {
-            setEmailErr(false);
+        if(validEmail.test(email)) {
+            setEmailErr(false)
+        }else{
+            setEmailErr(true)
         }
 
-        if (!validPassword.test(usuario.senha)) {
-            setSenhaErr(true);
-        } else {
-            setSenhaErr(false);
-        }    };
+        if(validPassword.test(senha)) {
+            setSenhaErr(false)
+        }else{
+            setSenhaErr(true)
+        }
 
-    const handleCadastro = (e) => {
+    }
+
+    function handleSubmit(e) {
         e.preventDefault();
-        // validate();
+        validate();
 
-        // Se não houver erros de validação, adiciona o usuário ao vetor de usuários
         if (!nomeErr && !emailErr && !senhaErr) {
             // Adiciona o novo usuário ao vetor existente
             const novoUsuario = {
-                nome: usuario.nome,
-                email: usuario.email,
-                senha: usuario.senha,
+                nome: nome,
+                email: email,
+                senha: senha,
             };
 
+            let erroPost = false;
+
             axios.post('http://localhost:3001/users', novoUsuario).then(resposta => console.log(resposta.data))
-                .catch(function (error) {
+            .catch(function (error) {
                 console.log(error);
-                });
+                erroPost = true;
+            });
+            setNome("");
+            setEmail("");
+            setSenha("");
 
-            // const dbPath = 'data/db.json';
-
-            // try {
-            //     // Lê o conteúdo do arquivo db.json
-            //     const data = fs.readFileSync(dbPath, 'utf-8');
-
-            //     // Faz o parse do conteúdo para um objeto JavaScript
-            //     const db = JSON.parse(data);
-
-            //     // Adiciona o novo usuário ao vetor de usuários
-            //     db.users.push(novoUsuario);
-
-            //     // Escreve o novo conteúdo de volta no arquivo
-            //     fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
-
-            //     // Limpa os campos após o cadastro
-            //     setUsuario({
-            //         nome: '',
-            //         email: '',
-            //         senha: '',
-            //     });
-
-            //     console.log('Novo usuário cadastrado:', novoUsuario);
-            // } catch (error) {
-            //     console.error('Erro ao atualizar o arquivo db.json:', error);
-            // }
+            if(erroPost){
+                alert("Erro no cadastro, entre em contato com suporte!")
+            }else{
+                alert("Cadastrado com sucesso!")
+            }
         }
-    };
+    }
     return (
         <div className='cadastro'>
             <main className="container_cadastro" >
@@ -94,7 +81,7 @@ function CadastroPage() {
                 </div>
                 <div className="centralizado">
 
-                    <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                         <div>
                             <button type="button" href="#" className="btm__facebook">
                                 Inscrever-se com o Facebook
@@ -109,24 +96,38 @@ function CadastroPage() {
                             <p>______________________ ou ______________________</p>
                         </div>
                         <div>
-                            <p className="texto-negrito">Qual é o seu email?</p>
+                            <p className="texto-negrito-nome">Nome</p>
+                            <input type="text" 
+                            value={nome} 
+                            onChange={(e) => setNome(e.target.value)} 
+                            className="txtEmail" 
+                            placeholder="Insira seu nome" />
+                            {nomeErr && <p>Por favor digite um nome valido</p>}
                         </div>
                         <div>
-                            <input type="text" onChange= { (e)=> setEmail(e.target.value) } className="txtEmail" placeholder="Insira seu email"required />
-                            
+                            <p className="texto-negrito">Qual é o seu email?</p>
+                            <input type="email" 
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)} 
+                            className="txtEmail" 
+                            placeholder="Insira seu email" />
+                            {emailErr && <p>Por favor digite um email valido</p>}
                         </div>
                         <div>
                             <p className="texto-negrito-senha">Crie sua senha?</p>
+                            <input type="password" 
+                            value={senha} 
+                            onChange={(e) => setSenha(e.target.value)} 
+                            className="txtEmail" 
+                            placeholder="Insira sua senha" />
+                            {senhaErr && <p>Por favor digite uma senha valido</p>}
                         </div>
                         <div>
-                            <input type="password" onChange={ (e)=> setSenha(e.target.value)} className="txtEmail" placeholder="Insira sua senha" required/>
+                            <input type="submit"  href="#" className="inscrever-se" value="Inscrever-se"/>
                         </div>
                         <div>
-                            <input type="submit" href="#" onClick={handleCadastro} className="inscrever-se" value="Inscreva-se"/>
-                        </div>
-                        <div>
-                            <h5>
-                                Já tem uma conta? <a href="#">Faça login</a>
+                            <h5 >
+                                Já tem uma conta? <Link href="/Login" className='login_cadastro'>Faça login</Link>
                             </h5>
                         </div>
                     </form>
